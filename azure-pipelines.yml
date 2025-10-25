@@ -24,3 +24,11 @@ steps:
     failOnIssues: true
     projectName: 'juice-shop-goof'
     organization: 'snyk-certification-2025-anand'
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snyk-azure-devops'
+    testType: 'command'
+    command: 'sbom test'
+    failOnIssues: true
+    projectName: 'juice-shop-goof'
+    organization: 'snyk-certification-2025-anand'
