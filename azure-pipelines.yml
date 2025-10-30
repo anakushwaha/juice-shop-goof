@@ -4,7 +4,15 @@
 # https://aka.ms/yaml
 
 trigger:
-- snyk-azure-pipelines
+  branches:
+    include:
+      - master
+      - snyk-azure-pipelines
+
+pr:
+  branches:
+    include:
+      - master
 
 pool:
   vmImage: ubuntu-latest
